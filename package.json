@@ -10,8 +10,8 @@
   "mainInput": "WebpackReactTestApp",
   "mainOutput": "main",
   "dependencies": {
-    "react": "~0.12.2",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "react": "~0.13.3"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -39,6 +39,7 @@
     "babel-loader": "^4.0.0",
     "grunt-contrib-clean": "~0.6.0",
     "sass-loader": "^1.0.1",
-    "react-hot-loader": "^1.0.7"
+    "react-hot-loader": "^1.0.7",
+    "coffee-jsx-loader": "^0.1.2"
   }
 }

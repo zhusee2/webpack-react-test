@@ -46,6 +46,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'react-hot!babel-loader'
     }, {
+      test: /\.(cjsx)$/,
+      exclude: /node_modules/,
+      loader: 'react-hot!coffee-jsx-loader'
+    }, {
       test: /\.scss/,
       loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
     }, {
