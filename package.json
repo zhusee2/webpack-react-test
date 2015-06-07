@@ -10,6 +10,7 @@
   "mainInput": "WebpackReactTestApp",
   "mainOutput": "main",
   "dependencies": {
+    "moment": "^2.10.3",
     "normalize.css": "~3.0.3",
     "react": "~0.13.3"
   },

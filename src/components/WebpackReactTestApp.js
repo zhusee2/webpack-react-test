@@ -8,11 +8,17 @@ var HugojayTimer = require('./HugojayTimer.cjsx');
 require('normalize.css');
 require('../styles/main.css');
 
+var props = {
+  id: '4kM',
+  title: 'Title 我是標題~~~',
+  due: '2016/12/11'
+};
+
 var WebpackReactTestApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
-        <HugojayTimer />
+        <HugojayTimer {...props} />
       </div>
     );
   }
