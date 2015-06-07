@@ -8,10 +8,17 @@ formatTimeComponent = (component) ->
   if component < 10 then "0#{component}" else component
 
 class Countdown extends React.Component
+  constructor: (props) ->
+    super
+    @state = {
+      dueDate: moment(props.due, DATE_FORMAT),
+      daysLabel: '',
+      timeLabel: ''
+    }
+
   calculate: =>
-    dueDate = moment(@props.due, DATE_FORMAT)
     currentDate = moment()
-    diffDuration = moment.duration(dueDate - currentDate)
+    diffDuration = moment.duration(@state.dueDate - currentDate)
 
     days = Math.floor(diffDuration.asDays())
     hours = formatTimeComponent(diffDuration.hours())
