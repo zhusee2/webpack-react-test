@@ -1,0 +1,65 @@
+$base-size:  15px;
+$large-size: 20px;
+$title-size: 18px;
+
+$red:  #cc0000;
+$blue: #0066cc;
+$grey: #777777;
+
+@function relative($target, $base: $base-size, $unit: 1em) {
+  @return ($target / $base) * $unit;
+}
+
+.hugojay-timer {
+  width: 13.2em;
+  background: linear-gradient(to bottom, white, #dedede);
+  font: $base-size 'Source Han Sans TW', 'Source Han Sans', 'Source Sans Pro', Helvetica, sans-serif;
+  padding: relative(5px) relative(10px);
+  border: 2px solid $grey;
+  border-radius: relative(6px);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    // Ribbon
+    content: '';
+    width: 5em;
+    height: relative(12px);
+    background-color: $blue;
+    box-shadow: 0 5px 0 rgba(0,0,0,.2);
+    opacity: .85;
+    transform: rotate(45deg) translateX(50%);
+    transform-origin: right center;
+    position: absolute;
+    top: relative(10px);
+    right: relative(10px);
+  }
+
+  &, div {
+    box-sizing: border-box;
+  }
+
+  .timer-title {
+    color: $blue;
+    font-size: relative($title-size);
+    line-height: relative(30px, $large-size);
+    font-weight: 500;
+    padding-right: 1em;
+  }
+  .timer-due {
+    text-align: right;
+    margin-top: relative(5px);
+  }
+  .timer-countdown {
+    color: $grey;
+    line-height: relative(30px);
+    text-align: center;
+
+    strong {
+      color: $red;
+      font-size: relative($large-size);
+      display: inline-block;
+    }
+  }
+}
