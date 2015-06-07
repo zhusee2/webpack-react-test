@@ -8,7 +8,7 @@ formatTimeComponent = (component) ->
   if component < 10 then "0#{component}" else component
 
 class Countdown extends React.Component
-  calculate: ->
+  calculate: =>
     dueDate = moment(@props.due, DATE_FORMAT)
     currentDate = moment()
     diffDuration = moment.duration(dueDate - currentDate)
@@ -24,8 +24,11 @@ class Countdown extends React.Component
     })
 
   componentWillMount: ->
-    @calculate()
+    do @calculate
+    @_intervalId = window.setInterval(@calculate, 1000)
 
+  componentWillUnmount: ->
+    window.clearInterval(@_intervalId)
 
   render: ->
     <div className="timer-countdown">
