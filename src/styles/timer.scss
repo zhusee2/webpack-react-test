@@ -11,15 +11,24 @@ $grey: #777777;
 }
 
 .hugojay-timer {
-  width: 13.2em;
+  width: relative(200px);
+  height: relative(100px);
   background: linear-gradient(to bottom, white, #dedede);
-  font: $base-size 'Source Han Sans TW', 'Source Han Sans', 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: $base-size;
+  font-family: 'Source Han Sans TW', 'Source Han Sans', 'Source Sans Pro', Helvetica, sans-serif;
+  line-height: relative(20px);
   padding: relative(5px) relative(10px);
   border: 2px solid $grey;
   border-radius: relative(6px);
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
+
+  & > div {
+    flex: 0 0 auto;
+  }
 
   &::before {
     // Ribbon
@@ -43,13 +52,12 @@ $grey: #777777;
   .timer-title {
     color: $blue;
     font-size: relative($title-size);
-    line-height: relative(30px, $large-size);
+    line-height: relative(30px, $title-size);
     font-weight: 500;
     padding-right: 1em;
   }
   .timer-due {
     text-align: right;
-    margin-top: relative(5px);
   }
   .timer-countdown {
     color: $grey;
@@ -59,6 +67,7 @@ $grey: #777777;
     strong {
       color: $red;
       font-size: relative($large-size);
+      line-height: 1;
       display: inline-block;
     }
   }
