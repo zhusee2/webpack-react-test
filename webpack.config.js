@@ -51,7 +51,7 @@ module.exports = {
       loader: 'react-hot!coffee-jsx-loader'
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+      loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader?outputStyle=expanded'
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
