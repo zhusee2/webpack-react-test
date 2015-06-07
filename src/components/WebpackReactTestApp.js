@@ -9,9 +9,9 @@ require('normalize.css');
 require('../styles/main.css');
 
 var props = {
-  id: '4kM',
-  title: 'Title 我是標題~~~',
-  due: '2016/12/11'
+  id: '70G',
+  title: '研替39梯',
+  due: '2017/08/18'
 };
 
 var WebpackReactTestApp = React.createClass({
